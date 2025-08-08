@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Diseases - Deteksi Penyakit Padi</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Font Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS (global project style) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand text-white fw-bold" href="{{ url_for('landing_page') }}">RiceCare AI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('landing_page') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('detect_page') }}">Disease Detection</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{{ url_for('diseases_page') }}">Rice Diseases</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Section Kenali Penyakit Padi -->
+<div class="disease-container">
+    <h1 class="disease-section-title">Kenali dan Antisipasi Penyakit Padi</h1>
+    <p class="disease-subtitle">Pelajari gejala dan penyebabnya agar panen optimal!</p>
+
+    <div class="disease-card">
+        <div class="disease-card-image">
+            <img src="{{ url_for('static', filename='images/blast.jpg') }}" alt="Blast">
+        </div>
+        <div class="disease-card-text">
+            <h3 class="disease-title">Blast</h3>
+            <p class="disease-description">Penyakit akibat jamur <em>Pyricularia grisea</em> yang menyerang daun padi.</p>
+        </div>
+    </div>
+
+    <div class="disease-card">
+        <div class="disease-card-image">
+            <img src="{{ url_for('static', filename='images/blight.jpg') }}" alt="Bacterial Blight">
+        </div>
+        <div class="disease-card-text">
+            <h3 class="disease-title">Bacterial Blight</h3>
+            <p class="disease-description">Penyakit akibat jamur <em>Pyricularia grisea</em> yang menyerang daun padi.</p>
+        </div>
+    </div>
+
+    <div class="disease-card">
+        <div class="disease-card-image">
+            <img src="{{ url_for('static', filename='images/brownspot.jpg') }}" alt="Brown Spot">
+        </div>
+        <div class="disease-card-text">
+            <h3 class="disease-title">Brown Spot</h3>
+            <p class="disease-description">Penyakit akibat jamur <em>Pyricularia grisea</em> yang menyerang daun padi.</p>
+        </div>
+    </div>
+
+    <div class="disease-card">
+        <div class="disease-card-image">
+            <img src="{{ url_for('static', filename='images/tungro.jpg') }}" alt="tungro">
+        </div>
+        <div class="disease-card-text">
+            <h3 class="disease-title">tungro</h3>
+            <p class="disease-description">Penyakit akibat jamur <em>Pyricularia grisea</em> yang menyerang daun padi.</p>
+        </div>
+    </div>
+
+    <div class="disease-card">
+        <div class="disease-card-image">
+            <img src="{{ url_for('static', filename='images/narrow.jpg') }}" alt="Narrow Brown Spot">
+        </div>
+        <div class="disease-card-text">
+            <h3 class="disease-title">Narrow Brown Spot</h3>
+            <p class="disease-description">Penyakit akibat jamur <em>Pyricularia grisea</em> yang menyerang daun padi.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
